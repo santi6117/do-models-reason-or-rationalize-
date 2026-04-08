@@ -1,5 +1,5 @@
 # Research Question
-Does iterative reasoning strategies improve accuracy compared to standard Chain-of-Thought reasoning in large language models?
+Do strucutred iterative reasoning strategies improve accuracy compared to standard Chain-of-Thought reasoning in large language models?
 
 # Hypothesis 
 Iterative reasoning methods will outperform Chain-of-Thought
@@ -36,6 +36,12 @@ The primary independet variable is:
 All other variables will remain constant. 
 
 ## Evaluation Metric
+We undergo two forms of evalution: qualitative and quantative 
+### Quantative: 
+Our quantative metric will be accuracy which is defined as "accuracy = correct answers / total questions."
+### Qualatative:
+We analyze selected examples to understand how reasoning strategies differ. This might included cases where one reasoning method fails and the other succeeds or where models might introduce or correct errors during refinement.
+
 Our evaluation metric will be primarily accuracy, defined as "accuracy = correct answers / total questions." 
 
 ## Prompt templates:
@@ -156,5 +162,5 @@ Our results will be stored in CSV format.
 ## Limitations 
 Several limitations to be acknowledged include:
 - Only a subset of GSM8K will be evaluated 
-- Diffusion reasoning is simulated rather than implemented through a true diffusion model 
+- Diffusion reasoning is simulated rather than implemented through a true diffusion model. This has the potneital to cause the model to either rewrite the answer from scratch or ignore the input depending on the level of noise.
 - Prompt wording may influence model behavior
